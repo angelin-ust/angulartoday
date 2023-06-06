@@ -1,0 +1,25 @@
+<p>product-list works!</p>
+<div>
+    <h2>Products Table</h2>
+    <table class="table table-striped">
+        <thead>
+            <th>Product id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </thead>
+        <tr *ngFor="let Produc of products">
+            <td>{{Produc.productId}}</td>
+            <td>{{Produc.name}}</td>
+            <td>{{Produc.description}}</td>
+            <td>{{Produc.price}}</td>
+            <td>{{Produc.qty}}</td>
+            <td>
+                 <button (click) = "updateProducted(Produc.productId)" class = "btn btn-info"> Update</button> 
+                <button  (click) = "deleteProducted(Produc.productId)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                
+            </td>
+        </tr>
+    </table>
+</div>
